@@ -66,7 +66,7 @@ from airflow.contrib.operators import dataproc_operator
 
 dataproc_create_job = f'''
     gcloud dataproc clusters create cluster-test-1 --region=us-central1 --project=dataprod-cluster-testing-1 --num-workers=2 --image-version='1.4-debian9' --zone=us-central1-f \
-    --bucket=composor-staging-us-central1-temp --num-masters=1 --master-machine-type=n1-standard-4 --master-boot-disk-type=pd-standard --master-boot-disk-size=15 --worker-machine-type=n1-standard-2 \
+    --bucket=dataproc_cluster_temp_by_composer --num-masters=1 --master-machine-type=n1-standard-4 --master-boot-disk-type=pd-standard --master-boot-disk-size=15 --worker-machine-type=n1-standard-2 \
     --worker-boot-disk-type=pd-standard --worker-boot-disk-size=15 --service-account='742690957765-compute@developer.gserviceaccount.com' --scopes=cloud-platform
     '''
 
